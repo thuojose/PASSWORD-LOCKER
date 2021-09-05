@@ -167,3 +167,21 @@ def main():
             print('\n')
             print(f"Password Locker Account for {user_name} created succesfully!!")
             print('\n')
+            
+        elif short_code == 'du':
+            '''
+            Displays name of current users
+            '''
+            if display_users():
+                print("Here are the users using password locker")
+                print('-'*40)
+                print('\n')   
+
+                for user in display_users():
+                    print(f"User_Name:{user.name}")
+                print("\n")
+
+            else:
+                print('\n')
+                print("**Password locker has no users!\n   Fancy being first user?**")
+                print('\n')
