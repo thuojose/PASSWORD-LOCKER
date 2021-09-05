@@ -137,3 +137,33 @@ def main():
     print("Hello!Welcome to PassWord Locker!")
     print("-"*33)
     print("\n")
+
+    while True:
+        print('''Use these short codes to get around \n
+            ShortCodes: \n
+                cu:create new pass locker account \n
+                du:display users using pass locker\n
+                lg:login to your account \n
+                ex:exit the app          ''')
+        #take user input
+        short_code = input().lower()
+
+        if short_code == "cu":
+            '''
+            Creates a new user account
+            '''
+            print("-"*27)
+            print("New Password Locker Account")
+            print("-"*27)
+            print("\n")
+
+            print("Enter User Name")
+            user_name = input()
+
+            print("Enter Account Password")
+            user_password = input()
+
+            save_user( create_user(user_name,user_password) ) #create and save user
+            print('\n')
+            print(f"Password Locker Account for {user_name} created succesfully!!")
+            print('\n')
