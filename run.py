@@ -185,3 +185,25 @@ def main():
                 print('\n')
                 print("**Password locker has no users!\n   Fancy being first user?**")
                 print('\n')
+
+        elif short_code == "lg":
+            '''
+            Logs in user to the password locker account
+            '''
+            print('\n')
+            print("*"*32)    
+            print("Log into Password Locker Account")
+            print("*"*32)
+
+            print("Enter User Name")
+            user_name = input()
+            
+            print("Enter Password")
+            user_password = input()
+
+
+            if  user_log_in(user_name,user_password):
+                print('\n')
+                print("*"*40)    
+                print(f"Welcome {user_name} to your Credentials" )
+                print("*"*40)
