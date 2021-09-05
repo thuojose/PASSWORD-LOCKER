@@ -77,3 +77,16 @@ class Credential:
 
         return password
        
+    @classmethod
+    def find_by_name(cls,name,password,credential_name):
+        '''
+        Method that takes a credential name and returns the a credential name that mayches it
+        
+        Args:
+            credential_name:Name of the credential to search for
+        Returns:
+            The actual credential that matches the name
+        '''
+        for credential in cls.credential_list:
+            if credential.user_name==name   and credential.user_password==password and credential.credential_name==credential_name:
+                return credential

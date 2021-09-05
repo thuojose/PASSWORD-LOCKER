@@ -95,3 +95,15 @@ def test_save_multiple_credential(self):
 
         self.assertEqual(len(generated_password),pass_length)  
         
+        def test_find_credential(self):
+            '''
+        test to see if we can search for and fetch a credential by its name
+        '''
+
+        self.new_credential.save_credential()
+        test_credential=Credential("Yesterday","Evening","Century","Goodnight")
+
+        test_credential.save_credential()
+
+        found_credential=Credential.find_by_name("Yesterday","Evening","Century","Goodnight")
+        self.assertEqual(found_credential.credential_password,test_credential.credential_password)
