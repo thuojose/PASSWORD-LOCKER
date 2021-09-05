@@ -263,4 +263,26 @@ def main():
                             print("\n")
                             print("You have no credentials saved")
                             print("Create a new one...")
-                            print("\n") 
+                            print("\n")
+                             
+                    elif short_code == 'gc':
+                        '''
+                        Generate Credential with a randomised password
+                        '''
+                        print("\n")
+                        print("New Credential With Auto-Generated Password")
+                        print("-"*42)
+                        print("\n")
+
+                        print("Enter Name of Credential...")
+                        credential_name = input()
+
+                        print("Enter length size for the password e.g 8")
+                        pass_length = int(input())
+
+                        #create,save new credential with a randomised key
+                        save_credential(create_credential(user_name,user_password,credential_name,(generated_password(pass_length))))  
+
+                        print('\n')
+                        print(f"**Credential {credential_name} has been created and saved successfully**")
+                        print('\n')    
