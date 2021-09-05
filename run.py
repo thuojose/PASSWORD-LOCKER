@@ -72,3 +72,12 @@ def create_credential(user_name,user_password,credential_name,credential_passwor
 
     return new_credential
 
+def save_credential(credential):
+    '''
+    Function to save a credential
+
+    Args:
+        credential:the credential to be saved
+    '''
+
+    credential.save_credential()

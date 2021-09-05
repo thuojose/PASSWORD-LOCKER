@@ -30,3 +30,10 @@ class Credential:
         self.user_password=user_password
         self.credential_name=credential_name
         self.credential_password=credential_password
+
+    def save_credential(self):
+        '''
+        Method that saves a credential obj to the credential list
+        '''
+
+        Credential.credential_list.append(self)
