@@ -28,3 +28,19 @@ def test_save_user(self):
     '''
     self.new_user.save_user() #saving a user
     self.assertEqual(len(User.user_list),1)
+    
+def test_save_multiple_user(self):
+    '''
+    test save multiple to check if we can save multiple user obj to our user_list
+    '''
+
+    self.new_user.save_user()
+    test_user=User("Mbugua","2021")
+    test_user.save_user()
+    self.asserEqual(len(User.user_list),2)
+    
+    def tearDown(self):
+        '''
+        tearDown method that cleans up after each test has run
+        '''
+        User.user_list=[]  
