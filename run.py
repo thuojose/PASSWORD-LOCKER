@@ -36,3 +36,10 @@ def save_user(user):
     '''
 
     user.save_user()
+    
+def display_users():
+    '''
+    Functionn that returns the users using pass_locker
+    '''
+
+    return User.display_users()

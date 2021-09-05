@@ -22,4 +22,11 @@ class User:
         '''
         save user method that saves user obj into user list
         '''
-        User.user_list.append(self)  
+        User.user_list.append(self)
+        
+    @classmethod
+    def display_users(cls):
+        '''
+        Method that returns users using the password locker app
+        '''
+        return cls.user_list  
