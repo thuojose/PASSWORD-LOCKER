@@ -37,6 +37,7 @@ class Credential:
         '''
 
         Credential.credential_list.append(self)
+        
     def delete_credential(self):
         '''
         Method that deletes a saved credential from the credential_list
@@ -61,4 +62,18 @@ class Credential:
             if credential.user_name==name   and credential.user_password==password:
                 user_credential_list.append(credential)
 
-        return user_credential_list        
+        return user_credential_list 
+    
+    @classmethod
+    def generate_password(cls,pass_length):
+        '''
+        Method that generates a random alphanumeric password for a user
+        '''
+        #password characters
+        pass_chars= string.ascii_letters+string.digits+string.punctuation
+
+        #password
+        password=''.join(random.choice(pass_chars) for i in range(pass_length))
+
+        return password
+       

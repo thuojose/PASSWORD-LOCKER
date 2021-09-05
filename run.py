@@ -81,3 +81,14 @@ def save_credential(credential):
     '''
 
     credential.save_credential()
+
+def generated_password(pass_length):
+    '''
+    Function that generate a random password for a user's credential
+
+    Args:
+        pass_length:Length the user wants the password to be 
+    '''
+    password=Credential.generate_password(pass_length)
+
+    return password     
