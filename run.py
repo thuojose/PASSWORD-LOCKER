@@ -323,3 +323,56 @@ def main():
                             print("\n")
                             
 
+
+                    elif short_code == 'ex':
+                        '''
+                        Exit credential account
+                        '''
+                        print(f"See you later {user_name}")
+                        print("Logging Out...")
+                        print("Logged Out")
+                        print('\n')
+                        break 
+                    else:
+                        '''
+                        User types wrong code
+                        '''
+                        print('\n')
+                        print(f"Sorry there is no option associated with code:{short_code}")  
+                        print("Try Again..!")
+                        print('\n')  
+
+
+            else:
+                print('\n')
+                print(f"No Account for {user_name}")
+                print("Please try again or create an account")
+                print('\n')
+
+
+                        
+
+
+
+
+
+        elif short_code == 'ex':
+            print("Ciao.....")
+            break
+        else :
+                print(f"No such short code:{short_code}!Please use provided codes") 
+                print('\n')      
+                        
+
+
+
+        # elif short_code=="du":
+        # elif short_code=="lg":
+        # elif short_code=="ex":
+        #      print("Ciao....")
+        #      break
+        # else:
+        #      print("Didn't catch that.Please use the short codes provided")       
+                
+if __name__ == "__main__":
+    main()
