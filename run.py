@@ -207,3 +207,17 @@ def main():
                 print("*"*40)    
                 print(f"Welcome {user_name} to your Credentials" )
                 print("*"*40)
+
+                while True:
+                    '''
+                    Loop to run functionalities after successful login
+                    '''
+                    print('''Use these short code to navigate \n
+                        cc:Create a new credential \n
+                        dc:Display saved credentials \n
+                        gc:Generate credential with a random password\n
+                        dl:Delete credential\n    
+                        ex:Log out of credential account           ''')
+
+                    #get short code from user
+                    short_code = input().lower()
