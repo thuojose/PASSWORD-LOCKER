@@ -90,3 +90,23 @@ class Credential:
         for credential in cls.credential_list:
             if credential.user_name==name   and credential.user_password==password and credential.credential_name==credential_name:
                 return credential
+            
+    @classmethod
+    def credential_exists(cls,name,password,credential_name):
+        '''
+        Method that takes credential name and returns a boolean if the credential exists
+
+        Arg:
+        credential_name:Name of the credential
+        user_name:Name of the user who owns the credential
+        user_password:Password of the user
+        '''
+
+        for credential in cls.credential_list:
+            if credential.user_name==name   and credential.user_password==password and credential.credential_name==credential_name:
+                return True
+
+        return False       
+
+
+

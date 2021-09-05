@@ -107,3 +107,23 @@ def test_save_multiple_credential(self):
 
         found_credential=Credential.find_by_name("Yesterday","Evening","Century","Goodnight")
         self.assertEqual(found_credential.credential_password,test_credential.credential_password)
+
+def test_check_existing_credential(self):
+        '''
+        test to check if we can return a boolean if we can/cannot find a credential
+        '''
+
+
+        self.new_credential.save_credential()
+        test_credential=Credential("Yesterday","Evening","Century","Goodnight")
+
+        test_credential.save_credential()
+
+        credential_exists=Credential.credential_exists("Yesterday","Evening","Century","Goodnight")
+        self.assertTrue(credential_exists)
+
+
+        
+        
+if __name__=='__main__':
+    unittest.main()        
