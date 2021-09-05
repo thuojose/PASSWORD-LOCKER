@@ -91,4 +91,49 @@ def generated_password(pass_length):
     '''
     password=Credential.generate_password(pass_length)
 
-    return password     
+    return password 
+
+def delete_credential(credential):
+    '''
+    Function that deletes a credential
+
+    Args:
+        credential:credential to be deleted
+    '''
+
+    credential.delete_credential()
+
+def display_credentials(user_name,user_password):
+    '''
+    Function that returns all the users saved credentials
+    '''
+
+    return Credential.display_credential(user_name,user_password)     
+
+def find_by_name(user_name,user_password,credential_name):
+    '''
+    Function that find a credential by name and returns the credential
+    '''
+
+    return Credential.find_by_name(user_name,user_password,credential_name)
+
+
+
+def credential_exists(user_name,user_password,credential_name):
+    '''
+    Function that find a credential by name and returns the credential
+    '''
+
+    return Credential.credential_exists(user_name,user_password,credential_name)
+
+    
+    
+    
+def main():
+    '''
+    Function running the passlocker app
+    '''
+    print("-"*33)
+    print("Hello!Welcome to PassWord Locker!")
+    print("-"*33)
+    print("\n")
