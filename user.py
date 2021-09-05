@@ -11,3 +11,9 @@ class User:
         name:New user name
         password:New user password
     '''
+    user_list=[]
+
+    def __init__(self,name,password):
+        
+        self.name=name
+        self.password=password 
