@@ -243,3 +243,24 @@ def main():
                         print('\n')
                         print(f"Credentials for *{credential_name}* has been created and saved successfully")
                         print('\n') 
+
+                    elif short_code == 'dc':
+                        '''
+                        Returning the user's saved credentials
+                        '''
+
+                        if display_credentials(user_name,user_password):
+                            print('\n')
+                            print(f"{user_name} Credentials")
+                            print("-"*25)
+
+                            for credential in display_credentials(user_name,user_password):
+                                print(f"Account:{credential.credential_name}")
+                                print(f"Password:{credential.credential_password}")  
+                                print('-'*25)
+
+                        else:
+                            print("\n")
+                            print("You have no credentials saved")
+                            print("Create a new one...")
+                            print("\n") 
