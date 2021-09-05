@@ -43,3 +43,27 @@ def test_save_credential(self):
 
         self.new_credential.save_credential()
         self.assertEqual(len(Credential.credential_list),1)
+
+
+def test_save_multiple_credential(self):
+        '''
+        tesr save multiple credential to test if we can save multiple credentials to the credential list
+        '''
+
+        self.new_credential.save_credential()
+        test_credential=Credential("Ruanne","ruanne254","Lynet","lyn")
+        
+        test_credential.save_credential()
+        self.assertEqual(len(Credential.credential_list),2)
+        
+        def test_delete_credential(self):
+            '''
+        delete credential to test if we can remove a credential from the credential list
+        '''
+        self.new_credential.save_credential()
+
+        test_credential=Credential("Java","Clothing","Designer","Future") 
+        test_credential.save_credential()
+        
+        self.new_credential.delete_credential()
+        self.assertEqual(len(Credential.credential_list),1)

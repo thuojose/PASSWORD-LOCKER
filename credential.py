@@ -37,3 +37,28 @@ class Credential:
         '''
 
         Credential.credential_list.append(self)
+    def delete_credential(self):
+        '''
+        Method that deletes a saved credential from the credential_list
+        '''
+
+        Credential.credential_list.remove(self) 
+
+
+    @classmethod
+    def display_credential(cls,name,password):
+        '''
+        Method that returns a users's credential lists
+
+        Args:
+            user_name:name of the user
+            user_password:password of the user
+        '''
+
+        user_credential_list=[]
+
+        for credential in cls.credential_list:
+            if credential.user_name==name   and credential.user_password==password:
+                user_credential_list.append(credential)
+
+        return user_credential_list        
