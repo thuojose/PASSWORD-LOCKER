@@ -43,3 +43,15 @@ def display_users():
     '''
 
     return User.display_users()
+
+def user_log_in(name,password):
+    '''
+    Function that allows a user to log in to their    credential account
+
+    Args:
+        name:Name of the user who created the acount
+        password:Password the user used to create the account
+    '''
+    verified_user=User.user_verified(name,password)
+    
+    return verified_user

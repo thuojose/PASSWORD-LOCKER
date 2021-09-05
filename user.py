@@ -30,3 +30,20 @@ class User:
         Method that returns users using the password locker app
         '''
         return cls.user_list  
+
+    @classmethod
+    def user_verified(cls,name,password):
+        '''
+        Method that takes a user login info  & returns a boolean true if the details are correct
+
+        Args:
+            name:User name to search
+            password:password to match
+
+        Return:
+            Boolean true if they both match to a user & false if it doesn't    
+        '''
+        for user in cls.user_list:
+            if user.name==name and user.password==password:
+                return True
+        return False

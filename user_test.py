@@ -50,4 +50,24 @@ def test_save_multiple_user(self):
         test_display_users returns list of password locker users
         ''' 
 
-        self.assertEqual(User.display_users(),User.user_list)   
+        self.assertEqual(User.display_users(),User.user_list)
+        
+    def test_login_user(self):
+        '''
+        test_login_ to login a user
+        '''
+        #confirms if as valid credentials are entered
+        self.new_user.save_user() 
+        test_user=User("Henry","2019")
+        test_user.save_user()
+        logged_in=User.user_verified("Henry","2019")
+        
+        self.assertTrue(logged_in)  
+        
+        
+        
+        
+        
+        
+if __name__=='__main__':
+    unittest.main()    
