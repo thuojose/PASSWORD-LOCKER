@@ -286,3 +286,40 @@ def main():
                         print('\n')
                         print(f"**Credential {credential_name} has been created and saved successfully**")
                         print('\n')    
+
+                    elif short_code == 'dl':
+                        '''
+                        Delete a Credential
+                        '''
+                        print('\n')
+                        print("Enter Name Of The Credential...")
+                        print("-"*31)
+                        credential_name = input()
+
+                        if credential_exists(user_name,user_password,credential_name):
+                            search_credential = find_by_name(user_name,user_password,credential_name)
+                            print(f"{search_credential.credential_name}\n{search_credential.credential_password}")
+
+                            print('\n')
+                            print(f"Are You Sure You Wish to Delete {search_credential.credential_name}? \n   This Action is Irreversible")    
+                            print("Enter y/n...")
+                            print('\n')
+
+                            delete_response = input().lower()
+
+                            if delete_response == 'y':
+                                search_credential.delete_credential()
+                                print("**Credential Deleted Successfully**")
+                                print('\n')
+
+                            else :
+                                print("Probably a good idea")
+                                print("... Exiting delete action")
+                                print("\n")
+                                    
+
+                        else:
+                            print(f"**No credential with the name {credential_name} exists**")
+                            print("\n")
+                            
+
